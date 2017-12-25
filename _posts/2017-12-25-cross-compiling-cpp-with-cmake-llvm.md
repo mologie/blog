@@ -183,16 +183,19 @@ Save the following file to `~/Toolchains/armv6-alpine-linux-musleabihf-llvm.cmak
 ([Link for browsers without JS enabled.](https://gist.github.com/mologie/4425c16477e2218af83078c4f8708867))
 ([Raw file link.](https://gist.githubusercontent.com/mologie/4425c16477e2218af83078c4f8708867/raw/armv6-alpine-linux-musleabihf-llvm.cmake))
 
-**The above toolchain file configures CMake for compiling for the Raspberry Pi Zero and 1.**
-For the Raspberry Pi 2/3, change the relevant lines of the target platform configuration to:
+The above toolchain file configures CMake for compiling for the Raspberry Pi Zero and 1. Other
+Raspberry Pi boards (2 and 3) are backwards-compatible to run ARMv6 code. Differences between ARMv6
+and ARMv7 are minimal. If you're sure that you wish to exclude the Pi Zero/1 and must take advantage
+of Thumb-2, you can update the machine flags like so:
 
 {% highlight cmake %}
-SET(CMAKE_SYSTEM_PROCESSOR arm) # uname -p
-SET(CROSS_TARGET arm-alpine-linux-musleabihf)
 SET(CROSS_MACHINE_FLAGS "-marm -march=armv7 -mfloat-abi=hard -mfpu=vfp")
 {% endhighlight %}
 
 Rename the file appropriately, for example to `armv7-alpine-linux-musleabihf-llvm.cmake`.
+
+The Raspberry Pi 3 additionally allows running 64-bit code, which requires different machine flags
+and changes to the target platform's triplet. Alpine Linux does not target AArch64 for the RPi.
 
 # Installing Additional Libraries
 
