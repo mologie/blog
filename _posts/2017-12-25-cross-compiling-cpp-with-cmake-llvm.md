@@ -206,9 +206,10 @@ compiled as static library:
 {% highlight shell %}
 $ git clone https://github.com/jbeder/yaml-cpp.git
 $ cd yaml-cpp
-$ mkdir -p build/alpine-3.7-armv6-hf; cd build/alpine-3.7-armv6-hf
+$ mkdir -p build/alpine-3.7-armhf; cd build/alpine-3.7-armhf
+$ TOOLCHAIN_FILE=$HOME/Toolchains/armv6-alpine-linux-musleabihf-llvm.cmake
 $ cmake \
-    -D CMAKE_TOOLCHAIN_FILE=$HOME/Toolchains/armv6-linux-musleabihf-llvm.cmake \
+    -D CMAKE_TOOLCHAIN_FILE=$TOOLCHAIN_FILE \
     -D YAML_CPP_BUILD_TESTS=OFF \
     -D YAML_CPP_BUILD_TOOLS=OFF \
     -D YAML_CPP_BUILD_CONTRIB=OFF \
@@ -283,8 +284,8 @@ On your machine with the cross-toolchain installed in `~/Toolchains`:
 
 {% highlight shell %}
 $ mkdir build; cd build
-$ TOOLCHAINF_FILE=$HOME/Toolchains/armv6-alpine-linux-musleabihf-llvm.cmake
-$ cmake -D CMAKE_TOOLCHAIN_FILE=$TOOLCHAINF_FILE ..
+$ TOOLCHAIN_FILE=$HOME/Toolchains/armv6-alpine-linux-musleabihf-llvm.cmake
+$ cmake -D CMAKE_TOOLCHAIN_FILE=$TOOLCHAIN_FILE ..
 $ make
 -- Configuring done
 -- Generating done
