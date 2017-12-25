@@ -127,7 +127,7 @@ non-persistent container, or purge the container later with `docker rm <name>`.
 
 # Extend this list by the packages you need. Many programs need 'linux-headers'
 # and all of them need 'alpine-sdk' when compiling. Search for packages with:
-# apk -X $MIRROR -U --allow-untrusted --root $SYSROOT search terms here
+# apk -X $MIRROR --root $SYSROOT --arch $ARCH search YOUR TERMS HERE
 / $ apk -X $MIRROR --root $SYSROOT --arch $ARCH \
       add alpine-sdk linux-headers YOUR ADDITIONAL PACKAGES HERE
 
