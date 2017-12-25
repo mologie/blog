@@ -1,0 +1,41 @@
+# Jekyll configuration for mologie.github.io
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Binary Dungeons and Dragons
+author: Oliver Kuckertz
+email: oliver.kuckertz@mologie.de
+description: >-
+  A journal and travler's guide on dealing with rare creatures such as Linuxes and XNUs, their
+  security and insecurities, the eternal fight with LLVM and its dragon spawn, embedded systems and
+  an occasional note on surviving business relations.
+  Views and opinions expressed on this site are my own and not those of my employers.
+  All content on this website, for which I hold the copyright, is licensed under CC BY-SA 4.0.
+baseurl: "/blog"
+url: "https://mologie.github.io"
+keybase_username: mologie
+github_username: mologie
+#twitter_username: mologie
+business:
+  email: oliver.kuckertz@softwific.com
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
