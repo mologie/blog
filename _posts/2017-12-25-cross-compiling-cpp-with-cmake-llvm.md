@@ -5,7 +5,7 @@ date:   2017-12-25 16:25:01 +0100
 categories: programming
 ---
 
-# Forword
+# Foreword
 
 The purpose of this guide is to give an overview of setting up a cross compilation environment at
 the example of a Raspberry Pi 1 (armv6hf) or 2/3 (armv7) running Alpine Linux[^1]. The procedures
@@ -43,7 +43,7 @@ RAM minus what is required by running applications.[^3]
 You may also use any other Linux distribution that uses libgcc[^4] (not to be confused with glibc,)
 including Raspbian and Debian. The only things that change when using a different distro are the
 sysroot's contents and thus also the libstdc++/GCC version, which are reflected as `GCC_BASEVER` in
-the CMake toolchain file presented later in thie guide.
+the CMake toolchain file presented later in this guide.
 
 For clarity, a sysroot is a subset of the files from the root directory of the target machine, which
 are required for compiling applications for it. Usually, it's a thinned out version of `/lib` and
@@ -97,7 +97,7 @@ becomes the sysroot for our cross-compilation toolchain.
 $ SYSROOT=$HOME/Toolchains/sysroots/alpine-3.7-armhf
 $ mkdir -p "$SYSROOT"
 
-# Create a persistent Docker conatiner for running Alpine 3.7. This allows you
+# Create a persistent Docker container for running Alpine 3.7. This allows you
 # to return to it later and pull more packages from the Alpine repos. We also
 # grant the container write access to $SYSROOT.
 $ sudo docker run -it -v $SYSROOT:/sysroot --name alpine_stager alpine:3.7 sh
@@ -240,7 +240,7 @@ variables to point Automake to your cross-compilers; also, set `--target` to the
 Did compiling yaml-cpp during the previous section work? 🎉
 
 Let's check the rest of the toolchain for proper functionality by writing a small demo program and
-linking it against the static archive of yaml-cpp that is availble in your sysroot. Finally, the
+linking it against the static archive of yaml-cpp that is available in your sysroot. Finally, the
 program is copied to the Raspberry Pi via SSH and started.
 
 It's also a good exercise to include some floating point calculations to check if LLVM correctly
@@ -320,7 +320,7 @@ link to the post via email.
 
 [^1]: Alpine Linux is my distribution of choice for embedded systems, because it can run from RAM and is thus not affected by power failures. Raspbian/Debian are designed for a read-write root filesystem, which is OK for desktop systems and servers, but a questionable choice for systems, which are supposed to work reliably in an uncontrolled environment. The disadvantage of Alpine is that data must be explicitly committed to persistent storage.
 
-[^2]: LLVM, in contrast to GCC, has cross-compilation capabilties built in and thus avoids the headache of compiling a compiler that then compiles an incomplete cross-compiler for compiling support files, with which one can finally build the real cross compiler. Eek. Granted, LLVM from scratch is not for the faint of heart either. However, for the purpose of this guide, we assume that LLVM is easily installable on your system. After all, one LLVM installation covers all target devices.
+[^2]: LLVM, in contrast to GCC, has cross-compilation capabilities built in and thus avoids the headache of compiling a compiler that then compiles an incomplete cross-compiler for compiling support files, with which one can finally build the real cross compiler. Eek. Granted, LLVM from scratch is not for the faint of heart either. However, for the purpose of this guide, we assume that LLVM is easily installable on your system. After all, one LLVM installation covers all target devices.
 
 [^3]: This especially implies that you'll have trouble installing `alpine-sdk` on the Raspberry Pi itself. We'll use Docker for building the sysroot instead because of this intentional design limitation, which is reasonable for embedded systems.
 
