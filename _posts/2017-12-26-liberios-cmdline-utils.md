@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LiberIOS hype train, htop on iOS"
+title:  "LiberIOS Hype Train, Htop on iOS"
 date:   2017-12-26 19:15:00 +0100
 categories: apple
 ---
