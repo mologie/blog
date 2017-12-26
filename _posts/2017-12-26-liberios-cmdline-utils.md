@@ -38,8 +38,8 @@ empty tar file somewhen.[^3]
 Caveats:
 
 * I intentionally did not set the suid bits for traceroute/traceroute6.
-* You may to move ping6 to `/jb/sbin` or `/sbin` to mirror macOS 100%, but it's technically
-  irrelevant whether it appears there or not (unless some program invokes it by its absolute path.)
+* You may move ping6 to `/jb/sbin` or `/sbin` to mirror macOS 100%, but it's technically irrelevant
+  whether it appears there or not (unless some program invokes it by its absolute path.)
 * Something something disclaimer for breaking your iOS device: Assume, that each utility can and
   will erase your root file system, eat your first-born and turn your iDevice into a fire-breathing
   dragon, because neither Apple nor I thoroughly tested the tools on iOS.
