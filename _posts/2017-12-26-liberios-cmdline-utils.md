@@ -28,7 +28,7 @@ stuff, that Morpheus does not ship in his binpack yet! Highlights:
 * various binaries that my oh-my-zsh setup needs to work right (env and alike)
 * other utilities and symlinks, which are available on macOS High Sierra and make sense on iOS
 
-All tools are sourced from <https://opensource.apple.com/>.
+All macOS system tools are sourced from <https://opensource.apple.com/>.
 
 I'll update the tar file if utilities turn out to not work as expected. I'll also remove utilities
 that Morpheus ends up including into his binpack, that is bundled with LibreIOS and available on
