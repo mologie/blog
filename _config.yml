@@ -21,6 +21,7 @@ github_username: mologie
 #twitter_username: mologie
 business:
   email: oliver.kuckertz@softwific.com
+google_analytics: UA-111600393-1
 
 # Build settings
 markdown: kramdown
