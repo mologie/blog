@@ -144,7 +144,8 @@ above. This download provides zero benefit for the average iOS/Cydia user.
 ([signature](https://s3.eu-central-1.amazonaws.com/mologie.github.io/assets/morebintools64.tar.gz.sig))  
 <small>last updated Dec 27th 18:00 CET: added git, curl, rsync, libpcre; fixed ag, coreutils</small>
 
-Verify using GPG ([key on keybase.io](https://keybase.io/mologie/pgp_keys.asc?fingerprint=4f8f50e9df8d0f28a5ee95ae8e7074f534e41872)):
+Verify the download using GPG
+([key on keybase.io](https://keybase.io/mologie/pgp_keys.asc?fingerprint=4f8f50e9df8d0f28a5ee95ae8e7074f534e41872)):
 
 ```
 $ gpg --verify morebintools64.tar.gz.sig
@@ -156,22 +157,22 @@ gpg:                 aka "Oliver Kuckertz <oliver.kuckertz@rwth-aachen.de>" [ult
 gpg:                 aka "Oliver Kuckertz <oliver.kuckertz@softwific.com>" [ultimate]
 ```
 
-Copy it to the iDevice, untar to `/jb/usr`:
+**Read the warnings below,** then copy it to the iDevice and untar to `/jb/usr`:
+
+* Assume, that each utility can and will erase your root file system, eat your first-born and turn
+  your iDevice into a fire-breathing dragon, because neither Apple nor I thoroughly tested the tools
+  on iOS.
+* You must extract the bundle to `/jb/usr` for dynamically linked programs (git, curl, ag, etc.)
+  to work correctly. Tinkerers can use `install_name_tool` to change where dylibs are loaded from.
+* I intentionally did not set the suid bits for traceroute/traceroute6.
 
 ```sh
 $ tar -xvf /tmp/morebintools64.tar.gz -C /jb/usr
 ```
 
-Caveats:
-
-* You *must* extract the bundle to `/jb/usr` for dynamically linked programs (git, curl, ag, etc.)
-  to work correctly.
-* I intentionally did not set the suid bits for traceroute/traceroute6.
-* You may move ping6 to `/jb/sbin` or `/sbin` to mirror macOS 100%, but it's technically irrelevant
-  whether it appears there or not (unless some program invokes it by its absolute path.)
-* Something something disclaimer for breaking your iOS device: Assume, that each utility can and
-  will erase your root file system, eat your first-born and turn your iDevice into a fire-breathing
-  dragon, because neither Apple nor I thoroughly tested the tools on iOS.
+Send me an email (footer) for voting for your favorite tool to be added to the bundle when I next
+update it, to let me know if you had success or issues  with it or how you're using it. I may not
+respond to all emails, but I sure do read them all. 💌
 
 # Footnotes
 
