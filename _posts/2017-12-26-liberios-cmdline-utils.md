@@ -14,7 +14,7 @@ do evil and potentially bork one's system. After all, `rm -rf /` could be one la
 reset-the-app button. On a jailbroken phone without sandbox, such app behaviour is obviously fatal.
 
 In light of the LiberIOS release, I dug out my repository of ported iOS utilities. Htop, originally
-compiled for iOS 10, works flawlessly after resigning it with `jtool`:
+compiled for iOS 10, works well after resigning it with `jtool`:
 
 ![htop running on iOS 11]({{ "/assets/2017/2017-12-26-ios-htop.png" | absolute_url }})
 
