@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LiberIOS Hype Train, Htop on iOS"
+title:  "LiberIOS CLI Tools Bundle for iOS 11"
 date:   2017-12-26 19:15:00 +0100
 categories: apple
 ---
@@ -21,11 +21,15 @@ compiled for iOS 10, works flawlessly after resigning it with `jtool`:
 Due to popular demand I'm bundling up a subset of these utilities. What's inside? All the cool
 stuff, that Morpheus does not ship in his binpack yet! Highlights:
 
-* htop (the one and only)
-* The Silver Searcher (ag)
-* tree 🎄
-* GNU coreutils, single-executable build
-* various binaries that my oh-my-zsh setup needs to work right (env and alike)
+* **htop** 2.0.2
+* **git** 2.15.1 with full TLS support *(new!)*
+* **curl** 7.57.0 using iOS' certificate store *(new!)*
+* **rsync** 3.1.2 *(new!)*
+* **ag** "The Silver Searcher” 2.1.0
+* **tree** 1.7.0 🎄
+* **GNU coreutils** 8.26, single-executable build
+* Apple binaries, that my oh-my-zsh setup needs to work right (env and alike)
+* Apple pcre-9 for ag
 * other utilities and symlinks, which are available on macOS High Sierra and make sense on iOS
 
 All macOS system tools are sourced from <https://opensource.apple.com/>.
@@ -34,15 +38,6 @@ I'll update the tar file if utilities turn out to not work as expected. I'll als
 that Morpheus ends up including into his binpack, that is bundled with LiberIOS and available on
 [newosxbook.com](http://newosxbook.com/tools/iOSBinaries.html). Ideally, I'll end up shipping an
 empty tar file somewhen.[^3]
-
-Caveats:
-
-* I intentionally did not set the suid bits for traceroute/traceroute6.
-* You may move ping6 to `/jb/sbin` or `/sbin` to mirror macOS 100%, but it's technically irrelevant
-  whether it appears there or not (unless some program invokes it by its absolute path.)
-* Something something disclaimer for breaking your iOS device: Assume, that each utility can and
-  will erase your root file system, eat your first-born and turn your iDevice into a fire-breathing
-  dragon, because neither Apple nor I thoroughly tested the tools on iOS.
 
 ```
 $ tree
@@ -53,11 +48,19 @@ $ tree
 │   ├── apply
 │   ├── basename
 │   ├── coreutils
+│   ├── curl
+│   ├── curl-config
 │   ├── dirname
 │   ├── echo
 │   ├── env
 │   ├── expr
 │   ├── getopt
+│   ├── git
+│   ├── git-receive-pack -> git
+│   ├── git-shell
+│   ├── git-upload-archive -> git
+│   ├── git-upload-pack
+│   ├── gitk
 │   ├── groups -> id
 │   ├── htop
 │   ├── jot
@@ -66,6 +69,7 @@ $ tree
 │   ├── nice
 │   ├── od -> hexdump
 │   ├── printenv
+│   ├── rsync
 │   ├── shlock
 │   ├── test
 │   ├── tree
@@ -76,15 +80,59 @@ $ tree
 │   ├── who
 │   ├── whoami -> id
 │   └── yes
+├── include
+│   ├── curl
+│   │   ├── curl.h
+│   │   ├── curlver.h
+│   │   ├── easy.h
+│   │   ├── mprintf.h
+│   │   ├── multi.h
+│   │   ├── stdcheaders.h
+│   │   ├── system.h
+│   │   └── typecheck-gcc.h
+│   ├── pcre.h
+│   ├── pcre_scanner.h
+│   ├── pcre_stringpiece.h
+│   ├── pcrecpp.h
+│   ├── pcrecpparg.h
+│   └── pcreposix.h
+├── lib
+│   ├── libcurl.4.dylib
+│   ├── libcurl.dylib -> libcurl.4.dylib
+│   ├── libcurl.la
+│   ├── libpcre.1.dylib
+│   ├── libpcre.a
+│   ├── libpcre.dylib -> libpcre.1.dylib
+│   ├── libpcre.la
+│   ├── libpcrecpp.0.dylib
+│   ├── libpcrecpp.a
+│   ├── libpcrecpp.dylib -> libpcrecpp.0.dylib
+│   ├── libpcrecpp.la
+│   ├── libpcreposix.0.dylib
+│   ├── libpcreposix.a
+│   ├── libpcreposix.dylib -> libpcreposix.0.dylib
+│   ├── libpcreposix.la
+│   └── pkgconfig
+│       ├── libcurl.pc
+│       ├── libpcre.pc
+│       ├── libpcrecpp.pc
+│       └── libpcreposix.pc
 ├── libexec
+│   ├── git-core
+│   │   └── ...
 │   └── path_helper
-└── sbin
-    ├── arp
-    ├── chroot
-    ├── ping6
-    ├── route
-    ├── traceroute
-    └── traceroute6
+├── sbin
+│   ├── arp
+│   ├── chroot
+│   ├── ping6
+│   ├── route
+│   ├── traceroute
+│   └── traceroute6
+└── share
+    ├── aclocal
+    │   └── libcurl.m4
+    └── git-core
+        └── ...
 ```
 
 # Download
@@ -92,27 +140,38 @@ $ tree
 ⚠️ This bundle is meant for developers, who are interested in using the command-line tools listed
 above. This download provides zero benefit for the average iOS/Cydia user.
 
-[morebintools64.tar.gz]({{ "/assets/morebintools64.tar.gz" | absolute_url }})
-([signature]({{ "/assets/morebintools64.tar.gz.sig" | absolute_url }}))  
-<small>last updated: never</small>
+[morebintools64.tar.gz](https://s3.eu-central-1.amazonaws.com/mologie.github.io/assets/morebintools64.tar.gz)
+([signature](https://s3.eu-central-1.amazonaws.com/mologie.github.io/assets/morebintools64.tar.gz.sig))  
+<small>last updated Dec 27th 18:00 CET: added git, curl, rsync, libpcre; fixed ag, coreutils</small>
 
 Verify using GPG ([key on keybase.io](https://keybase.io/mologie/pgp_keys.asc?fingerprint=4f8f50e9df8d0f28a5ee95ae8e7074f534e41872)):
 
 ```
 $ gpg --verify morebintools64.tar.gz.sig
 gpg: assuming signed data in 'morebintools64.tar.gz'
-gpg: Signature made Tue Dec 26 19:19:38 2017 CET
+gpg: Signature made Wed Dec 27 17:58:10 2017 CET
 gpg:                using RSA key 8E7074F534E41872
 gpg: Good signature from "Oliver Kuckertz <oliver.kuckertz@mologie.de>" [ultimate]
 gpg:                 aka "Oliver Kuckertz <oliver.kuckertz@rwth-aachen.de>" [ultimate]
 gpg:                 aka "Oliver Kuckertz <oliver.kuckertz@softwific.com>" [ultimate]
 ```
 
-Copy it to the iDevice, untar anywhere as root. `/jb/usr` sounds right:
+Copy it to the iDevice, untar to `/jb/usr`:
 
 ```sh
 $ tar -xvf /tmp/morebintools64.tar.gz -C /jb/usr
 ```
+
+Caveats:
+
+* You *must* extract the bundle to `/jb/usr` for dynamically linked programs (git, curl, ag, etc.)
+  to work correctly.
+* I intentionally did not set the suid bits for traceroute/traceroute6.
+* You may move ping6 to `/jb/sbin` or `/sbin` to mirror macOS 100%, but it's technically irrelevant
+  whether it appears there or not (unless some program invokes it by its absolute path.)
+* Something something disclaimer for breaking your iOS device: Assume, that each utility can and
+  will erase your root file system, eat your first-born and turn your iDevice into a fire-breathing
+  dragon, because neither Apple nor I thoroughly tested the tools on iOS.
 
 # Footnotes
 
