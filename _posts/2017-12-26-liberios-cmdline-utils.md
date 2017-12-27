@@ -31,7 +31,7 @@ stuff, that Morpheus does not ship in his binpack yet! Highlights:
 All macOS system tools are sourced from <https://opensource.apple.com/>.
 
 I'll update the tar file if utilities turn out to not work as expected. I'll also remove utilities
-that Morpheus ends up including into his binpack, that is bundled with LibreIOS and available on
+that Morpheus ends up including into his binpack, that is bundled with LiberIOS and available on
 [newosxbook.com](http://newosxbook.com/tools/iOSBinaries.html). Ideally, I'll end up shipping an
 empty tar file somewhen.[^3]
 
