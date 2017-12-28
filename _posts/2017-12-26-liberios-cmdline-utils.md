@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  "LiberIOS CLI Tools Bundle for iOS 11"
+title:  "LiberiOS! CLI Tools Bundle for iOS 11"
 date:   2017-12-26 19:15:00 +0100
 categories: apple
 ---
 
-Habemus Jailbreak, and it's glorious. LiberIOS[^1] jailbreaks iOS 11.0-11.1.2 and worked flawlessly
+Habemus Jailbreak, and it's glorious. LiberiOS[^1] jailbreaks iOS 11.0-11.1.2 and worked flawlessly
 on my testing iPad4,2[^2] after meddling with the offsets table embedded into the jailbreak
 executable. Official support for the iPad4,2 is probably added by now.
 
-Best of all, LiberIOS doesn't completely mangle iOS' Sandbox, meaning that iOS apps won't be able to
+Best of all, LiberiOS doesn't completely mangle iOS' Sandbox, meaning that iOS apps won't be able to
 do evil and potentially bork one's system. After all, `rm -rf /` could be one lazy iOS developer's
 reset-the-app button. On a jailbroken phone without sandbox, such app behaviour is obviously fatal.
 
-In light of the LiberIOS release, I dug out my repository of ported iOS utilities. Htop, originally
+In light of the LiberiOS release, I dug out my repository of ported iOS utilities. Htop, originally
 compiled for iOS 10, works well after resigning it with `jtool`:
 
 ![htop running on iOS 11]({{ "/assets/2017/2017-12-26-ios-htop.png" | absolute_url }})
@@ -35,7 +35,7 @@ stuff, that Morpheus does not ship in his binpack yet! Highlights:
 All macOS system tools are sourced from <https://opensource.apple.com/>.
 
 I'll update the tar file if utilities turn out to not work as expected. I'll also remove utilities
-that Morpheus ends up including into his binpack, that is bundled with LiberIOS and available on
+that Morpheus ends up including into his binpack, that is bundled with LiberiOS and available on
 [newosxbook.com](http://newosxbook.com/tools/iOSBinaries.html). Ideally, I'll end up shipping an
 empty tar file somewhen.[^3]
 
