@@ -38,7 +38,7 @@ stuff, that Morpheus does not ship in his binpack yet! Highlights:
 Additionally, the download contains the following programs, which replace programs from the binpack
 shipped with LiberiOS:
 
-* **vim** 7.4 (because LiberiOS' vim is incomplete and does not load support files from `/jb`)
+* **vim** 8.0 (APPL; LiberiOS' vim is incomplete and does not load support files from `/jb`)
 * **zsh** 5.4 (shipped version is 2.5 years old and also wants support files)
 
 All macOS system tools are sourced from <https://opensource.apple.com/>.
@@ -85,7 +85,7 @@ next version. Users, who pick out binaries, will have to do so by hand again whe
 The standard disclaimer applies: No warrenty implied.
 
 [morebintools64-2.tar.gz](https://s3.eu-central-1.amazonaws.com/mologie.github.io/iosbintools64/morebintools64-2.tar.gz) ([signature](https://s3.eu-central-1.amazonaws.com/mologie.github.io/iosbintools64/morebintools64-2.tar.gz.sig))  
-<small>Last updated Dec 29th 23:10 CET: Added gnupg v1, vim 7.4, zsh 5.4, tmux, libevent, touch, mkfifo</small>
+<small>Last updated Dec 29th 23:10 CET: Added gnupg v1, vim 8.0, zsh 5.4, tmux, libevent, touch, mkfifo</small>
 
 Verify the download using GPG
 ([key on keybase.io](https://keybase.io/mologie/pgp_keys.asc?fingerprint=4f8f50e9df8d0f28a5ee95ae8e7074f534e41872)):
