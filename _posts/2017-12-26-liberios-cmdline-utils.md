@@ -61,13 +61,15 @@ There are three mutually exclusive ways how this bundle can be used:
 
 2. Untar the full archive to `/jb/usr` via `tar -xf /path/to/the.tar.gz -C /jb/usr`.  
    <b>Caveat:</b> When you rejailbreak, zsh and vim break, because they get overwritten by LiberiOS'
-   old/broken versions. Write yourself some shell scripts to fix this after rejailbreaking.
+   versions. Write yourself some shell scripts to fix this after rejailbreaking.
 
-3. Modify LiberiOS' binpack yourself. This nets you point (2) without the above caveat. New caveat:
-   When an update for the jailbreak IPA is released, you'll have to patch it again.  
+3. Modify LiberiOS' binpack yourself and remove duplicates (vim, zsh.) Install this bundle normally
+   after jailbreaking with the modified LiberiOS version. This nets you point (2) without the above
+   caveat. New caveat:
+   When an update for the jailbreak is released, you'll have to patch it again.  
    <small>Patching LiberiOS is simple enough: Get the binpack-tar from its IPA, unpack and modify it
-   to your liking, for example by deleting offending binaries, use tar to bundle it all up[^4],
-   use zip to integrate the patched binpack back into the IPA.</small>
+   to your liking, then use tar to bundle it all up.[^4] Use zip to integrate the patched binpack
+   back into the IPA.</small>
 
 If there was any warrenty on this pack or LiberiOS, (3) would void it.
 
