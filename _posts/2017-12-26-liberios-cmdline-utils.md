@@ -54,7 +54,7 @@ It's a tar file, and it contains executables and support files. These (with the 
 statically linked stuff and those, that don't load files from the `share` directory) expect to live
 in `/jb/usr`.
 
-There are three mutually exclusive ways, how this bundle can be used:
+There are three mutually exclusive ways how this bundle can be used:
 
 1. Just pick out the binaries (and libraries) you need and copy them to `/jb/usr`. Don't use my vim
    and zsh builds. Safe, simple and reasonably sound. 
