@@ -9,9 +9,10 @@ permalink: /about/
 and this is my personal blog with ramblings of technical nature.
 
 I'm currently studying for a M.Sc. in Computer Science at RWTH Aachen University
-and run a small software development and consulting company named Softwific. In my spare time,
-I engage myself at <a href="http://www.fva.rwth-aachen.de/">FVA 1920 e.V.</a>, a glider plane
-research and flying club with ties to RWTH Aachen University.
+and run a small software development and consulting company named
+<a href="https://softwific.com">Softwific</a>. In my spare time, I engage myself at
+<a href="http://www.fva.rwth-aachen.de/">FVA 1920 e.V.</a>, a glider plane research and flying club
+with ties to RWTH Aachen University.
 
 You'll also find me developing various side projects - listed below - and taking existing software
 apart for security analysis. Findings of the latter are published on this blog after the deadlines
