@@ -5,12 +5,12 @@ date:   2018-03-01 12:43:00 +0100
 categories: hardware
 ---
 
+<div style="text-align:center;"><image src="{{ "/assets/2018/2018-03-01-asustor-as202t.png" | absolute_url }}" alt="ASUSTOR AS-202T via their product catalogue" height="250"/></div>
+
 As folk lore tells us, one shall never play on patch day. Apparently the same applies to ASUSTOR
 hardware. In this article, I'll talk about the process of recovering an ASUSTOR AS-202T NAS, which
 fails with an "Unknown error (Ref. 5052)" during initialization. Initialization is the process
 where the NAS's flashed minimal OS installs a full OS on the first partition of the NAS's disks.
-
-![ASUSTOR AS-202T via their product catalogue)]({{ "/assets/2018/2018-03-01-asustor-as202t.png" | absolute_url }})
 
 To the impatient: If ASUSTOR Control Center shows that your initialization OS image is of version
 3.0.0.R8N2 then follow the instructions at the end of this article to fix the error.
