@@ -77,7 +77,7 @@ Then unpack the initramfs using standard methods:
 ```sh
 mkdir initramfs_unpacked
 cd initramfs_unpacked
-zcat ../initramfs | cpio -idm
+xzcat ../initramfs | cpio -idm
 ```
 
 Before we start: ASUSTOR's official download page for firmware images does not present a license or
