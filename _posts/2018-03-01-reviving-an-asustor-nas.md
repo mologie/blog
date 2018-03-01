@@ -129,6 +129,10 @@ this because the device does not ship with 3.0.0 and the normal update process a
 smoothly enough. Thus, only those who updated to 3.0.0 and wiped their internal disks afterwards
 and prior to the release of 3.0.1 two weeks later would have been affected.
 
+Disclaimer: Like explained above 5052 is likely to be a fallback error code. The above solution did
+the trick for my device, but is not guaranteed to work on yours if something entirely different
+leads to the same error code.
+
 # Conclusion
 
 The setup of the product itself after the firmware was fixed went smoothly. However, I'd be careful
