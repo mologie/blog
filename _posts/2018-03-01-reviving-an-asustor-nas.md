@@ -118,7 +118,7 @@ Let's transplant 3.0.5's firmware updater onto 3.0.0 and see what happens:
     * `/usr/sbin/fwupdate`
     * `/usr/lib/libnasman.so.0.0`
 4. Ensure all overwritten files are executable
-5. Now connect to the web server of the NAS image; upload the 3.0.5 .img file
+5. Now connect to the web server of the initialization OS; upload the 3.0.5 .img file
 
 Lo and behold, the update runs through! Thus, the hardware was fine. It's unlikely that a workaround
 for some hardware issue was added in the recent software updates. The hardware is from 2013 after
