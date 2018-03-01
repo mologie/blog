@@ -18,7 +18,7 @@ To the impatient: If ASUSTOR Control Center shows that your initialization OS im
 # Initial and futile rescue attempts
 
 Googling for the magic words *asustor unknown error ref. "5052"* - 5052 being quoted so that I only
-receive results that do indeed include the error code (Google Fu!) yields exactly two results: A
+receive results that do indeed include the error code (Google Fu!) - yields exactly two results: A
 Facebook post with a screenshot of the problem and zero comments and a blog article of a Japanese
 writer, who suggests to boot the NAS with only one hard drive during initialization.
 
@@ -45,7 +45,6 @@ Apparently, the error was so uncommon that:
 
 1. Google didn't know about it
 2. ASUSTOR didn't get it often enough to bother documenting it
-3. It must happen rarely as implied by (1) and (2)
 
 Let the reverse engineering fun begin. I quickly found out that:
 
