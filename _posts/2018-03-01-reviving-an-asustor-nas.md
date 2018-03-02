@@ -33,11 +33,12 @@ error could have occured when the minimal OS image was flashed (or the flash was
 the updater crashed mid-way. It could also be a software bug caused by insufficient QA. (Spoiler:
 That was it.)
 
-If this was a customer's device, it'd tell him at this point to buy a new one and send this one in
-to get his money back, because having me take it apart is more expensive. Unfortunately for me, and
-fortunately for you my dear reader who might come from Google while looking for a possible solution
-to the mysterious error 5052, the device was from my dearest gliding plane club FVA - and the
-warrenty had expired. Might this be the reason the club ended up with the device in the first place?
+If this was a customer's device, I would tell him at this point to buy a new one and send the broken
+one in to get his money back, because having me take it apart is more expensive. Unfortunately for
+me, and fortunately for you my dear reader who might come from Google while looking for a possible
+solution to the mysterious error 5052, the device was from my dearest gliding plane club FVA - and
+the warrenty had expired. Might this be the reason the club ended up with the device in the first
+place?
 
 # What's error 5052?
 
