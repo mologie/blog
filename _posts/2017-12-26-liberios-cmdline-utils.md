@@ -81,8 +81,8 @@ Version: 2 (compare with `/jb/usr/share/mologie/bintools_version`)
 above. This download provides zero benefit for the average iOS/Cydia user and might, if used
 improperly, put their device into a state that's not automatically fixed by common tools.
 
-{% 🌐 If you've got the full archive installed, simply run `upgrade_mologie_binpack` to update to the
-next version. Users, who pick out binaries, will have to do so by hand again when updating. %}
+{% comment %}🌐 If you've got the full archive installed, simply run `upgrade_mologie_binpack` to update to the
+next version. Users, who pick out binaries, will have to do so by hand again when updating.{% endcomment %}
 
 The standard disclaimer applies: No warrenty implied.
 
