@@ -42,8 +42,7 @@ These are projects of various sizes - from a few lines of code, forks, to whole,
 # Website
 
 At this time of writing this <i>About</i> page, the blog was just hours old. Things on here may
-change! I aim for this blog to receive new content twice a month or whenever interesting things
-happen. The content is mostly of technical nature.
+change! The content is mostly of technical nature.
 
 The site generator used for this blog is [Jekyll](https://github.com/jekyll/jekyll).
 The Jekyll theme was forked from [Minima](https://github.com/jekyll/minima).

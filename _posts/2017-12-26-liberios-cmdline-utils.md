@@ -81,12 +81,12 @@ Version: 2 (compare with `/jb/usr/share/mologie/bintools_version`)
 above. This download provides zero benefit for the average iOS/Cydia user and might, if used
 improperly, put their device into a state that's not automatically fixed by common tools.
 
-🌐 If you've got the full archive installed, simply run `upgrade_mologie_binpack` to update to the
-next version. Users, who pick out binaries, will have to do so by hand again when updating.
+{% 🌐 If you've got the full archive installed, simply run `upgrade_mologie_binpack` to update to the
+next version. Users, who pick out binaries, will have to do so by hand again when updating. %}
 
 The standard disclaimer applies: No warrenty implied.
 
-[morebintools64-2.tar.gz](https://s3.eu-central-1.amazonaws.com/mologie.github.io/iosbintools64/morebintools64-2.tar.gz) ([signature](https://s3.eu-central-1.amazonaws.com/mologie.github.io/iosbintools64/morebintools64-2.tar.gz.sig))  
+[morebintools64-2.tar.gz](https://mologie.de/~oliver/mologie.github.io/iosbintools64/morebintools64-2.tar.gz) ([signature](https://mologie.de/~oliver/mologie.github.io/iosbintools64/morebintools64-2.tar.gz.sig))  
 <small>Last updated Dec 29th 23:10 CET: Added gnupg v1, vim 8.0, zsh 5.4, tmux, libevent, touch, mkfifo</small>
 
 Verify the download using GPG
