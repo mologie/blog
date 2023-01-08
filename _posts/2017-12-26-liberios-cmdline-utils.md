@@ -16,7 +16,7 @@ reset-the-app button. On a jailbroken phone without sandbox, such app behaviour 
 In light of the LiberiOS release, I dug out my repository of ported iOS utilities. Htop, originally
 compiled for iOS 10, works well after resigning it with `jtool`:
 
-![htop running on iOS 11]({{ "/assets/2017/2017-12-26-ios-htop.png" | absolute_url }})
+![htop running on iOS 11]({{ "/assets/2017/2017-12-26-ios-htop.png" | relative_url }})
 
 Due to popular demand I'm bundling up a subset of these utilities. What's inside? All the cool
 stuff, that Morpheus does not ship in his binpack yet! Highlights:

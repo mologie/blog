@@ -5,7 +5,7 @@ date:   2018-03-01 12:43:00 +0100
 categories: hardware
 ---
 
-<div style="text-align:center;"><image src="{{ "/assets/2018/2018-03-01-asustor-as202t.png" | absolute_url }}" alt="ASUSTOR AS-202T via their product catalogue" height="250"/></div>
+<div style="text-align:center;"><img src="{{ "/assets/2018/2018-03-01-asustor-as202t.png" | relative_url }}" alt="ASUSTOR AS-202T via their product catalogue" height="250"/></div>
 
 As folk lore tells us, one shall never play on patch day. Apparently the same applies to ASUSTOR
 hardware. In this article, I'll talk about the process of recovering an ASUSTOR AS-202T NAS, which
@@ -89,7 +89,7 @@ logic if one believes the output of `strings` and thus most likely to contain ou
 responsible chunk of code is quickly identified after scanning over the list of utility functions
 and settling for analyzing references to `Set_Error_With_Debug`:
 
-![ASUSTOR firmware updater error 5052]({{ "/assets/2018/2018-03-01-fwupdate-5052.png" | absolute_url }})
+![ASUSTOR firmware updater error 5052]({{ "/assets/2018/2018-03-01-fwupdate-5052.png" | relative_url }})
 
 The bunch of `jz` instructions above makes it likely that this is a *fallback error code*, which is
 hit only if none of the above specific codes matched. This expands our search from a single error
