@@ -14,8 +14,8 @@ description: >-
   an occasional note on surviving business relations.
   Views and opinions expressed on this site are my own and not those of my employers.
   All content on this website, for which I hold the copyright, is licensed under CC BY-SA 4.0.
+url: "https://mologie.github.io"
 baseurl: "/blog"
-url: "https://github.com/mologie"
 github_username: mologie
 
 # Build settings
