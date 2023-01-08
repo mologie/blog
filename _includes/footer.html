@@ -18,23 +18,12 @@
           {% if site.email %}
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           {% endif %}
-
-          {% if site.business.email %}
-          <li style="margin-top: 15px"><b>Business inquiries:</b></li>
-          <li><a href="mailto:{{ site.business.email }}">{{ site.business.email }}</a></li>
-          {% endif %}
         </ul>
       </div>
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
           <li><b>Social media:</b></li>
-
-          {% if site.keybase_username %}
-          <li>
-            {% include icon-keybase.html username=site.keybase_username %}
-          </li>
-          {% endif %}
 
           {% if site.github_username %}
           <li>

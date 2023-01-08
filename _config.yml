@@ -15,13 +15,8 @@ description: >-
   Views and opinions expressed on this site are my own and not those of my employers.
   All content on this website, for which I hold the copyright, is licensed under CC BY-SA 4.0.
 baseurl: "/blog"
-url: "https://mologie.github.io"
-keybase_username: mologie
+url: "https://github.com/mologie"
 github_username: mologie
-twitter_username: mologie
-business:
-  email: oliver.kuckertz@softwific.com
-google_analytics: UA-111600393-1
 
 # Build settings
 markdown: kramdown
